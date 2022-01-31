@@ -1,9 +1,11 @@
 import React, { Fragment } from 'react';
 
-const Header = () => {
+const Header = (props) => {
   return (
       <Fragment>
-          <h1>Header</h1>
+          <header className="App-header">
+          <h1>{props.title}</h1>
+          </header>
       </Fragment>
   );
 };
