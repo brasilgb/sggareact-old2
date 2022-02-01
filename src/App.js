@@ -1,13 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './components/Header';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Header, Footer } from './components';
+import { Home, Period } from './pages';
 function App() {
   return (
-    <div className="App">
-      <Header title="Inicio" className="App-header"/>
-        <img src={logo} className="App-logo" alt="logo" />
-    </div>
+    <Router>
+          <Header />
+          <div className="flex-grow">
+            <Routes>
+              <Route path="/" exact component={Home} />
+              <Route path="/periodos" component={Period} />
+            </Routes>
+          </div>
+          <Footer />
+        </Router>
   );
 }
 
