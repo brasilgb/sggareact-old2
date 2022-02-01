@@ -6,7 +6,7 @@ import { Home, Period } from './pages';
 function App() {
   return (
     <Router>
-          <Header />
+          <Header title="titulo" />
           <div className="flex-grow">
             <Routes>
               <Route path="/" exact component={Home} />
