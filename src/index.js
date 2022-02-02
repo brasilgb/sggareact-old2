@@ -20,7 +20,7 @@ render(
   <BrowserRouter>
     <div className="flex flex-col h-screen">
       <Header />
-      <div className="bg-green-500 flex-grow">
+      <div className="bg-gray-100 flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/periodo" element={<Period />} />

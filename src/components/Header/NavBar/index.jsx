@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useRef, useState } from 'react';
+import React, { Fragment, useRef, useState } from 'react';
 import useOnClickOutside from '../../ClickOutside';
 import DropDown from '../DropDown';
 

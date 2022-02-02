@@ -8,7 +8,7 @@ const DropDown = () => {
     };
     const ref = useRef();
     useOnClickOutside(ref, () => setShowOptions(false));
-    
+
     return (
         <Fragment>
             <div className='relative'>
