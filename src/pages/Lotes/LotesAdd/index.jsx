@@ -23,7 +23,8 @@ const LotesAdd = () => {
                 </ABoxHeaderTitle>
                 <ABreadcumb links={
                     [
-                        { label: "Lotes", url: "/lotes", linked: false }
+                        { label: "Lotes", url: "/lotes", linked: true },
+                        { label: "Adicionar Lotes", url: "/lotesadd", linked: false }
                     ]
                 } />
             </ABoxHeader>
@@ -35,30 +36,7 @@ const LotesAdd = () => {
 
             <ABoxBody>
 
-                <ATable>
-                    <ATr thead={true}>
-                        <ATh>Lote</ATh>
-                        <ATh>Fêmeas</ATh>
-                        <ATh>Capitalizadas/Data</ATh>
-                        <ATh>Machos</ATh>
-                        <ATh>Capitalizadas/Data</ATh>
-                        <ATh>Total Aves</ATh>
-                        <ATh>Aviários</ATh>
-                        <ATh>Cadastro</ATh>
-                        <ATh></ATh>
-                    </ATr>
-                    <ATr thead={false}>
-                        <ATd>1</ATd>
-                        <ATd>5800</ATd>
-                        <ATd>5750</ATd>
-                        <ATd>1250</ATd>
-                        <ATd>1190</ATd>
-                        <ATd>12</ATd>
-                        <ATd>data</ATd>
-                        <ATd></ATd>
-                    </ATr>
 
-                </ATable>
 
             </ABoxBody>
             <ABoxFooter>

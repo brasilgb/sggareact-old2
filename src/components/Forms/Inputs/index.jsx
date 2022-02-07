@@ -6,13 +6,13 @@ export const AInput = ({ id, type, ref, label, place }) => {
     return (
         <Fragment>
             <div>
-                <label class="text-gray-700 dark:text-gray-200" for="username">{label}</label>
+                <label class="text-gray-700" for="username">{label}</label>
                 <input
                     ref={ref}
                     id={id}
                     type={type}
                     placeholder={place}
-                    class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                    class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                 />
             </div>
         </Fragment>
@@ -29,7 +29,7 @@ export const AInputSearch = ({ id, type, ref, place }) => {
                     id={id}
                     type={type}
                     placeholder={place}
-                    class="w-full py-2 pl-4 pr-4 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
+                    class="w-full py-2 pl-4 pr-4 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
                 />
 
                 <span class="absolute inset-y-0 right-0 flex items-center pr-3">
