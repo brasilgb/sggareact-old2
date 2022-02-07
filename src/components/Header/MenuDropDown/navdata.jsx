@@ -7,7 +7,7 @@ export const navData = [
       },
       {
        "menu": "Períodos",
-        "url": "periodo",
+        "url": "/periodos",
         "slug": "",
         "submenu": null
       },{
@@ -16,15 +16,15 @@ export const navData = [
       "submenu": [
         {
           "menu": "Lotes",
-           "url": "/",
+           "url": "/lotes",
          }, {
           "menu": "Aviários",
-           "url": "aviarios.index",
+           "url": "aviarios",
          }
       ]
     },{
       "menu": "Coletas",
-       "url": "coletas.index",
+       "url": "coletas",
        "submenu": null
      },{
       "menu": "Ovos",
@@ -32,7 +32,7 @@ export const navData = [
       "submenu": [
         {
           "menu": "Envio",
-           "url": "envios.index",
+           "url": "envios",
          }, {
           "menu": "Descarte",
            "url": "",
@@ -44,10 +44,10 @@ export const navData = [
       "submenu": [
         {
           "menu": "Mortalidades",
-           "url": "mortalidades.index",
+           "url": "mortalidades",
          }, {
           "menu": "Pesagem",
-           "url": "pesagens.index",
+           "url": "pesagens",
          }
       ]
     },{
@@ -56,10 +56,10 @@ export const navData = [
       "submenu": [
         {
           "menu": "Recebimento",
-           "url": "recebimentos.index",
+           "url": "recebimentos",
          }, {
           "menu": "Consumo",
-           "url": "consumos.index",
+           "url": "consumos",
          }
       ]
     },{
@@ -68,10 +68,10 @@ export const navData = [
       "submenu": [
         {
           "menu": "Tarefas Gerais",
-           "url": "geraltarefas.index",
+           "url": "geraltarefas",
          }, {
           "menu": "Controle Diário",
-           "url": "controlediarios.index",
+           "url": "controlediarios",
          }
       ]
     },{
@@ -80,10 +80,10 @@ export const navData = [
       "submenu": [
         {
           "menu": "Despesas",
-           "url": "despesas.index",
+           "url": "despesas",
          }, {
           "menu": "Entradas",
-           "url": "financeiros.index",
+           "url": "financeiros",
          }
       ]
     },{
@@ -107,16 +107,16 @@ export const navData = [
       "submenu": [
         {
           "menu": "Empresa",
-           "url": "empresas.index",
+           "url": "empresas",
          }, {
           "menu": "E-mail",
-           "url": "emails.index",
+           "url": "emails",
          }, {
           "menu": "Backup",
-           "url": "backups.index",
+           "url": "backups",
          }, {
           "menu": "Usuários",
-           "url": "usuarios.index",
+           "url": "usuarios",
          }
       ]
     },{
@@ -125,22 +125,22 @@ export const navData = [
       "submenu": [
         {
           "menu": "Movimento Diário",
-           "url": "relatorios.movimentodiario",
+           "url": "relatorios/movimentodiario",
          }, {
           "menu": "Coletas",
-           "url": "relatorios.coleta",
+           "url": "relatorios/coleta",
          }, {
           "menu": "Financeiro",
-           "url": "relatorios.financeiro",
+           "url": "relatorios/financeiro",
          }, {
           "menu": "Estoque de Aves",
-           "url": "relatorios.estoqueave",
+           "url": "relatorios/estoqueave",
          }, {
           "menu": "Estoque de Ovos",
-           "url": "relatorios.estoqueovo",
+           "url": "relatorios/estoqueovo",
          }, {
           "menu": "Consumo Ração",
-           "url": "relatorios.consumo",
+           "url": "relatorios/consumo",
          }
       ]
     }

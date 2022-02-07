@@ -13,6 +13,8 @@ import {
   Header,
   Footer
 } from './components';
+import Lotes from "./pages/Lotes";
+import LotesAdd from "./pages/Lotes/LotesAdd";
 
 const rootElement = document.getElementById("root");
 render(
@@ -20,10 +22,12 @@ render(
   <BrowserRouter>
     <div className="flex flex-col h-screen">
       <Header />
-      <div className="bg-gray-100 flex-grow">
+      <div className="bg-gray-200 flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/periodo" element={<Period />} />
+          <Route path="/periodos" element={<Period />} />
+          <Route path="/lotes" element={<Lotes />} />
+          <Route path="/lotesadd" element={<LotesAdd />} />
         </Routes>
       </div>
       <Footer />

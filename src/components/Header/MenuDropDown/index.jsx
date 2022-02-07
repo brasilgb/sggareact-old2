@@ -5,6 +5,7 @@ import useOnClickOutside from '../../ClickOutside';
 import { navData } from './navdata';
 
 const MenuDropDown = () => {
+
     const [menuCategoryOpen, setMenuCategoryOpen] = useState([false, false]);
 
     const toggleSubMenu = (e, i) => {
@@ -25,8 +26,9 @@ const MenuDropDown = () => {
     };
     const ref = useRef();
     useOnClickOutside(ref, () => setMenuCategoryOpen([false, false]));
-    
+
     const menu = navData.map((nav) => nav);
+
     // console.log(menu);
     return (
         <Fragment>
@@ -43,7 +45,7 @@ const MenuDropDown = () => {
 
                     ) : (
 
-                        <li ref={ref}>
+                        <li key={m}>
                             <div className="relative inline-block">
                                 <Link to="#"
                                     onClick={(e) => toggleSubMenu(e, m)}
@@ -51,19 +53,24 @@ const MenuDropDown = () => {
                                 >
                                     {men.menu}
                                 </Link>
-                                <div
-                                   
-                                    className={"absolute -left-10 z-20 w-48 py-2 mt-4 bg-white rounded-md shadow-xl" + (menuCategoryOpen[m] ? " block" : " hidden")}
-                                >
-                                    {men.submenu.map((sub, s) => (
-                                        <Link key={s}
-                                            to={sub.url}
-                                            className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform hover:bg-gray-100"
-                                        >
-                                            {sub.menu}
-                                        </Link>
-                                    ))}
-                                </div>
+                                {menuCategoryOpen[m] &&
+                                    <div
+                                        onMouseLeave={() => setMenuCategoryOpen([false, false])}
+                                        // ref={ref}
+                                        className={"absolute -left-10 z-20 w-48 py-2 mt-4 bg-white rounded-md shadow-xl"}
+                                    >
+                                        {men.submenu.map((sub, s) => (
+                                            <Link key={s}
+                                                to={sub.url}
+                                                className="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform hover:bg-gray-100"
+                                            >
+                                                {sub.menu}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                }
+
+
                             </div>
                         </li>
 

@@ -1,14 +1,9 @@
 import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
 const Header = () => {
   return (
     <Fragment>
-      <header className="bg-gray-500'">
-        {/* <nav className='bg-gray-500'>
-          <Link to="/">Home</Link> | {" "}
-          <Link to="/periodo">Periodo</Link>
-        </nav> */}
+      <header className="bg-gray-100 border-b border-white shadow-lg">
         <NavBar/>
       </header>
     </Fragment>
