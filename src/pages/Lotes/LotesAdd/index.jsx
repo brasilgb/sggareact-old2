@@ -1,15 +1,17 @@
-import React from 'react';
-import { ABoxAll, ABoxBody, ABoxFooter, ABoxHeader, ABoxHeaderTitle } from '../../../components/Boxes';
+import React, { useState } from 'react';
+import { ABoxAll, ABoxBody, ABoxHeader, ABoxHeaderTitle } from '../../../components/Boxes';
 import { ABreadcumb } from '../../../components/Breadcumbs';
 import { AButtomAdd } from '../../../components/Buttons';
-import { AInputSearch } from '../../../components/Forms/Inputs';
+import { AInput, AInputSearch, ASelect } from '../../../components/Forms/Inputs';
 import { IconContext } from 'react-icons';
 import { IoFileTrayStacked } from "react-icons/io5";
-import { ATable, ATd, ATh, ATr } from '../../../components/Tables';
-import { Pagination } from '../../../components/Pagination';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { ABoxForm, ABoxFormBody } from '../../../components/Forms/BoxForm';
+import { AForm } from '../../../components/Forms';
 
 const LotesAdd = () => {
-
+    const [startDate, setStartDate] = useState(new Date());
     return (
         <ABoxAll>
             <ABoxHeader>
@@ -35,13 +37,56 @@ const LotesAdd = () => {
             </ABoxHeader>
 
             <ABoxBody>
+                <ABoxForm
+                    infoTitle="Titulo"
+                    infoText="Informação"
+                >
+                    <AForm action="#">
 
+                        <ABoxFormBody>
+                            <DatePicker
+                                closeOnScroll={(e) => e.target === document}
+                                selected={startDate}
+                                onChange={(date) => setStartDate(date)}
+                            />
+                            <AInput
+                                id="lote"
+                                type="text"
+                                // ref=""
+                                place="Lote"
+                                label="Lote"
+                                colspan={3}
+                            />
 
+                            <AInput
+                                id="lote"
+                                type="text"
+                                // ref=""
+                                place="Lote"
+                                label="Lote"
+                                colspan={3}
+                            />
 
+                            <AInput
+                                id="lote"
+                                type="text"
+                                // ref=""
+                                place="Lote"
+                                label="Lote"
+                                colspan={4}
+                            />
+
+                            <ASelect
+                                optiondef="Selecione"
+                                options={[{ uid: 1, value: "RS" }]}
+                                label="País"
+                                colspan={3}
+                            />
+
+                        </ABoxFormBody>
+                    </AForm>
+                </ABoxForm>
             </ABoxBody>
-            <ABoxFooter>
-                <Pagination />
-            </ABoxFooter>
         </ABoxAll>
     );
 };

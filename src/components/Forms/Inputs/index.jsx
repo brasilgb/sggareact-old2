@@ -1,20 +1,24 @@
 import React, { Fragment } from 'react';
 import { IconContext } from 'react-icons';
-import { IoSearch, IoSearchOutline } from 'react-icons/io5';
+import { IoSearchOutline } from 'react-icons/io5';
 
-export const AInput = ({ id, type, ref, label, place }) => {
+export const AInput = ({ id, type, ref, label, place, colspan }) => {
     return (
         <Fragment>
-            <div>
-                <label class="text-gray-700" for="username">{label}</label>
+            <div className={`col-span-6 sm:col-span-${colspan}`}>
+                <label htmlFor={id} className="block text-sm font-medium text-gray-700">
+                    {label}
+                </label>
                 <input
-                    ref={ref}
-                    id={id}
                     type={type}
+                    id={id}
+                    ref={ref}
+                    name="first-name"
                     placeholder={place}
-                    class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+                    className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                 />
             </div>
+
         </Fragment>
     );
 };
@@ -44,3 +48,27 @@ export const AInputSearch = ({ id, type, ref, place }) => {
         </Fragment>
     );
 };
+
+export const ASelect = ({id, ref, options, optiondef, label, colspan}) => {
+    return (
+        <Fragment>
+            <div className={`col-span-6 sm:col-span-${colspan}`}>
+                <label htmlFor="country" className="block text-sm font-medium text-gray-700">
+                    {label}
+                </label>
+                <select
+                    id={id}
+                    ref={ref}
+                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                >
+
+                    <option>{optiondef}</option>
+                    {options.map((opt, index) => (
+                        <option key={index} value={opt.uid}>{opt.value}</option>
+                    ))}
+                    
+                </select>
+            </div>
+        </Fragment>
+    );
+}
