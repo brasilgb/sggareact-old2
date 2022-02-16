@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { ABoxAll, ABoxBody, ABoxFooter, ABoxHeader, ABoxHeaderTitle } from '../../components/Boxes';
 import { ABreadcumb } from '../../components/Breadcumbs';
 import { AButtomAdd } from '../../components/Buttons';
@@ -7,10 +7,13 @@ import { IconContext } from 'react-icons';
 import { IoTimeSharp } from "react-icons/io5";
 import { ATable, ATd, ATh, ATr } from '../../components/Tables';
 import { Pagination } from '../../components/Pagination';
+import AProgressBar from '../../components/AProgressBar';
 
-const Period = () => {
+const Period = ({ loading }) => {
 
   return (
+    <Fragment>
+      <AProgressBar loading={loading}/>
     <ABoxAll>
       <ABoxHeader>
         <ABoxHeaderTitle>
@@ -63,6 +66,7 @@ const Period = () => {
         <Pagination />
       </ABoxFooter>
     </ABoxAll>
+    </Fragment>
   );
 };
 

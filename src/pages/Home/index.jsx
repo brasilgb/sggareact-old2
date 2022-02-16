@@ -1,9 +1,11 @@
 import React, { Fragment, useState } from 'react';
+import AProgressBar from '../../components/AProgressBar';
+const Home = ({ loading }) => {
 
-const Home = () => {
   const [isShown, setIsShown] = useState(false);
   return (
     <Fragment>
+      <AProgressBar loading={loading}/>
       <h1>Home</h1>
       <button
         onMouseEnter={() => setIsShown(true)}

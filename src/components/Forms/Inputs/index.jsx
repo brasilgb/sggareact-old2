@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { IconContext } from 'react-icons';
 import { IoSearchOutline } from 'react-icons/io5';
 
-export const AInput = ({ id, type, ref, label, place, colspan }) => {
+export const AInput = ({ id, type, value, ref, label, place, colspan }) => {
     return (
         <Fragment>
             <div className={`col-span-6 sm:col-span-${colspan}`}>
@@ -13,7 +13,6 @@ export const AInput = ({ id, type, ref, label, place, colspan }) => {
                     type={type}
                     id={id}
                     ref={ref}
-                    name="first-name"
                     placeholder={place}
                     className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                 />

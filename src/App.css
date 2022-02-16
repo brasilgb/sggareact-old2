@@ -1,0 +1,11 @@
+.react-datetime-picker__wrapper{
+    border: 1px solid rgb(209 213 219)!important;
+    border-radius: 0.375rem!important;
+    font-size: 0.875rem!important;
+    line-height: 1.25rem!important;
+    padding-top: 0.2rem;
+    padding-right: 0.70rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.75rem;
+    
+}
