@@ -25,17 +25,17 @@ export const AInput = ({ id, type, value, ref, label, place, colspan }) => {
 export const AInputSearch = ({ id, type, ref, place }) => {
     return (
         <Fragment>
-            <div class="relative flex-grow">
+            <div className="relative flex-grow">
 
                 <input
                     ref={ref}
                     id={id}
                     type={type}
                     placeholder={place}
-                    class="w-full py-2 pl-4 pr-4 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
+                    className="w-full py-2 pl-4 pr-4 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
                 />
 
-                <span class="absolute inset-y-0 right-0 flex items-center pr-3">
+                <span className="absolute inset-y-0 right-0 flex items-center pr-3">
                     <IconContext.Provider value={{ className: "text-xl text-gray-500 font-extrabold" }}>
                         <div>
                             <IoSearchOutline />
