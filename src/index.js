@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import {
   Home,
-  Period
+  Ciclo
 } from './pages';
 import {
   Header,
@@ -27,7 +27,7 @@ render(
       <div className="bg-gray-200 flex-grow">
         <Routes>
           <Route path="/" element={<Home loading={true} />} />
-          <Route path="/periodos" element={<Period loading={true} />} />
+          <Route path="/ciclos" element={<Ciclo loading={true} />} />
           <Route path="/lotes" element={<Lotes loading={true} />} />
           <Route path="/lotesadd" element={<LotesAdd loading={true} />} />
         </Routes>

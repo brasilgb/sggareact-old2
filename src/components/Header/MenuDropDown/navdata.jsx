@@ -6,8 +6,8 @@ export const navData = [
         "submenu": null
       },
       {
-       "menu": "Períodos",
-        "url": "/periodos",
+       "menu": "Ciclos",
+        "url": "/ciclos",
         "slug": "",
         "submenu": null
       },{

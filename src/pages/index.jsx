@@ -1,7 +1,7 @@
 import Home from './Home';
-import Period from './Period';
+import Ciclo from './Ciclo';
 
 export {
     Home,
-    Period
+    Ciclo
 }
