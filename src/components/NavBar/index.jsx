@@ -1,7 +1,6 @@
 import React, { Fragment, useRef, useState } from 'react';
-import useOnClickOutside from '../../ClickOutside';
+import useOnClickOutside from '../ClickOutside';
 import MenuProfile from '../MenuProfile';
-import MenuDropDown from '../MenuDropDown';
 import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import { IoHomeSharp, IoMenu } from 'react-icons/io5';
@@ -17,18 +16,10 @@ const NavBar = () => {
 
     return (
         <Fragment>
-            <nav className="px-2 sm:px-4 py-2.5">
-                <div className="container flex flex-wrap justify-between items-center mx-auto">
-                    <Link to="#" className="flex">
-                        <IconContext.Provider value={{ className: "text-lg font-medium" }}>
-                            <div>
-                                <IoHomeSharp />
-                            </div>
-                        </IconContext.Provider>
-                        <span className="self-center text-lg font-semibold whitespace-nowrap">FlowBite</span>
-                    </Link>
-                    <div className="flex items-center md:order-2">
-                        <MenuProfile />
+            <nav class="header bg-white shadow py-4 px-4">
+                <div class="header-content flex items-center flex-row">
+
+                <div className="flex items-center md:order-2">
                         <button
                             onClick={openMenu}
                             data-collapse-toggle="mobile-menu-2"
@@ -45,8 +36,19 @@ const NavBar = () => {
                             </IconContext.Provider>
                         </button>
                     </div>
-                    <div ref={ref} className={`${showMenu ? 'none' : 'hidden'} justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-2`}>
-                        <MenuDropDown />
+
+                    <div class="flex ml-auto">
+                        <a href class="flex flex-row items-center">
+                            <img
+                                src="https://pbs.twimg.com/profile_images/378800000298815220/b567757616f720812125bfbac395ff54_normal.png"
+                                alt
+                                class="h-10 w-10 bg-gray-200 border rounded-full"
+                            />
+                            <span class="flex flex-col ml-2">
+                                <span class="truncate w-20 font-semibold tracking-wide leading-none">John Doe</span>
+                                <span class="truncate w-20 text-gray-500 text-xs leading-none mt-1">Manager</span>
+                            </span>
+                        </a>
                     </div>
                 </div>
             </nav>

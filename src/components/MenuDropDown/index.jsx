@@ -1,6 +1,6 @@
 import React, { Fragment, useRef, useState } from 'react';
 import { Link } from "react-router-dom";
-import useOnClickOutside from '../../ClickOutside';
+import useOnClickOutside from '../ClickOutside';
 
 import { navData } from './navdata';
 
