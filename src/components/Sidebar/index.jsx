@@ -16,7 +16,7 @@ const SideBar = () => {
                 clip-rule="evenodd"
               />
             </svg>
-            <span className="leading-10 text-gray-100 text-2xl font-bold ml-1 uppercase">Brandname</span>
+            <span className="leading-10 text-gray-100 text-2xl font-bold ml-1 uppercase">Marca</span>
           </a>
         </div>
       </div>
